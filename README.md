@@ -1,5 +1,5 @@
 # WHEKE-WHEKE
-Is a T-SQL script tool which tentacles will allows you to discover unused SQL Server database across your SQL Server estate
+Is a T-SQL script tool which tentacles will allows you to discover unused SQL Server database across your SQL Server data warehouse estate
 <p align="center">
   <img width="460" src="https://github.com/francesco1119/wheke-wheke/blob/main/images/image-1600003201sxM.jpg">
 </p>
@@ -79,7 +79,7 @@ END
 CLOSE VarCursor
 DEALLOCATE VarCursor
 ```
-The Agent Job uses [OPENDATASOURCE](https://docs.microsoft.com/en-us/sql/t-sql/functions/opendatasource-transact-sql?view=sql-server-ver15) to connect to fetch and connect to each server. 
+The Agent Job uses [OPENDATASOURCE](https://docs.microsoft.com/en-us/sql/t-sql/functions/opendatasource-transact-sql?view=sql-server-ver15) to fetch and connect to each server. 
 
 `OPENDATASOURCE` provides ad hoc connection without using a linked server.
 
