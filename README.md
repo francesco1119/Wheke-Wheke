@@ -1,15 +1,14 @@
 # WHEKE-WHEKE
-Is a T-SQL script tool which tentacles will allows you to centralize and monitor you SQL Server estate from your jump server
+Is a T-SQL script tool which tentacles will allows you to discover unused SQL Server database across your SQL Server estate
 <p align="center">
   <img width="460" src="https://github.com/francesco1119/wheke-wheke/blob/main/images/image-1600003201sxM.jpg">
 </p>
 
-Wheke-Wheke takes his name from the Maori son Kina-Kina which lyrics are: 
-
+Wheke-Wheke takes his name from the Māori song Kina-Kina which lyrics are: 
 
 <table border="0">
  <tr>
-    <td><b style="font-size:30px">Maori</b></td>
+    <td><b style="font-size:30px">Māori</b></td>
     <td><b style="font-size:30px">English</b></td>
  </tr>
  <tr>
@@ -20,9 +19,21 @@ Tuna - tuna </br>
 Pipi - Pipi </br>
 Paua - paua </br>
 Kaimoana e hi! </br></td>
-    <td>Lorem ipsum ...</td>
+    <td>Sea egg - sea egg </br>
+Octopus - octopus </br>
+Scaly fish - scaly fish </br>
+Slimy eel - slimy eel </br>
+Sandy white shellfish </br>
+Abalone - abalone </br>
+They're all food from the sea!</td>
  </tr>
 </table>
+
+When you need Wheke-Wheke
+======
+
+I wrote a tool called ![SQL-Spring_Cleaning](https://github.com/francesco1119/SQL_Spring_Cleaning/blob/master/images/newsletter_SQL_Spring_Cleaning.png) that allows you to identify unused database on your SQL Server. But what to do if neet to discover   
+
 
 How to Install
 ======
