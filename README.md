@@ -1,15 +1,15 @@
 # WHEKE-WHEKE
-Is a T-SQL script tool which tentacles will allows you to discover unused SQL Server database across your SQL Server data warehouse estate
-<p align="center">
-  <img width="460" src="https://github.com/francesco1119/wheke-wheke/blob/main/images/image-1600003201sxM.jpg">
-</p>
+Is a T-SQL script tool which tentacles will allows you to discover unused SQL Server database across your SQL Server data warehouse.
 
 Wheke-Wheke takes its name from the Māori song Kina-Kina which lyrics are: 
 
-<table border="0">
+<div align="center">
+
+<table>
  <tr>
     <td><b style="font-size:30px">Māori</b></td>
     <td><b style="font-size:30px">English</b></td>
+    <td><b style="font-size:30px">Wheke-Wheke</b></td>
  </tr>
  <tr>
     <td>Kina - Kina </br>
@@ -26,13 +26,20 @@ Slimy eel - slimy eel </br>
 Sandy white shellfish </br>
 Abalone - abalone </br>
 They're all food from the sea!</td>
- </tr>
+ 
+ <td>
+  <img width="200" src="https://github.com/francesco1119/wheke-wheke/blob/main/images/image-1600003201sxM.jpg">
+</td>
+  </tr>
 </table>
+</div>
+
+
 
 Why Wheke-Wheke
 ======
 
-I wrote a tool called [SQL_Spring_Cleaning](https://github.com/francesco1119/SQL_Spring_Cleaning)  that allows you to identify unused database on your SQL Server. 
+Few days ago I wrote a tool called [SQL_Spring_Cleaning](https://github.com/francesco1119/SQL_Spring_Cleaning)  that allows you to identify unused database on your SQL Server. 
 
 But what to do if you need to discover unused SQL Server databases in a data warehouse scenario? 
 
@@ -45,10 +52,10 @@ How it works under the hood
 
 Here is where the magic happens: 
 
-```
+```SQL
 DECLARE @ServerName varchar(50), @DynamicSQL NVARCHAR(MAX)
 DECLARE @myTableVariable TABLE (id INT, ServerName varchar(50))
-insert into @myTableVariable values(1,'TESLABSQL01T'),(2,'TESLABSQL02T') -- Add your SQL Server list here
+insert into @myTableVariable values(1,'Server_A'),(2,'Server_B') -- Add your SQL Server list here
 select * from @myTableVariable
 
 Declare VarCursor cursor for
@@ -83,20 +90,17 @@ The Agent Job uses [OPENDATASOURCE](https://docs.microsoft.com/en-us/sql/t-sql/f
 
 `OPENDATASOURCE` provides ad hoc connection without using a linked server.
 
-You can reuse this approach in multiple ways. In the example above I'm querying `.master.sys.databases` and `.master.sys.sysprocesses` in all the server that I have listed in the line `@myTableVariable`. 
+You can reuse this approach in multiple ways. In the example above I'm querying `.master.sys.databases` and `.master.sys.sysprocesses` in all the servers that I have listed in the line `@myTableVariable`. So you just need to edit the line `values(1,'Server_A'),(2,'Server_B')` , add there your list of SQL Servers and voilà. 
 
 Can you see how handy it can be? 
 
 You can now query the whole data wharehouse as it was a big database! 
 
-
-
-
 How to Install
 ======
 
 1) Download the query **Create WHEKE-WHEKE.sql** and edit the first 4 rows:
-   ```
+   ```SQL
    DECLARE @YourEmail NVARCHAR(50) SET @YourEmail = 'Your_Email' --Put here your E-mail
    DECLARE @YourPassword NVARCHAR(50) SET @YourPassword = 'Your_Password' --Put here your E-mail
    DECLARE @YourSMTPSserver NVARCHAR(50) SET @YourSMTPSserver = 'Your_SMTP_Server' --Put here your SMTP Server
@@ -105,12 +109,12 @@ How to Install
    Keep in mind that if you are using Outlook, Gmail or any other 2FA e-mail SQL Server will not be able to send e-mails for you.
 
 2) Now edit the line and add a list of your SQL Servers:
-   ```
+   ```SQL
    insert into @myTableVariable values(1,''Server_A''),(2,''Server_B'') -- Add your SQL Server list here
    ```
    
 3) Now edit the line and enter your recipient e-mail address:
-   ```
+   ```SQL
    @recipients = 'YourEmail', -- replace with your email address
    ```
    
