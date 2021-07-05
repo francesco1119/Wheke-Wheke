@@ -1,7 +1,28 @@
 # WHEKE-WHEKE
-Identify unused databases and clean space on your SQL Server
+Is a T-SQL script tool which tentacles will allows you to centralize and monitor you SQL Server estate from your jump server
+<p align="center">
+  <img width="460" src="https://github.com/francesco1119/wheke-wheke/blob/main/images/image-1600003201sxM.jpg">
+</p>
 
-![alt text](https://www.computerhope.com/cdn/colossus.jpg)
+Wheke-Wheke takes his name from the Maori son Kina-Kina which lyrics are: 
+
+
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">Maori</b></td>
+    <td><b style="font-size:30px">English</b></td>
+ </tr>
+ <tr>
+    <td>Kina - Kina </br>
+Wheke - Wheke </br>
+Ika - Ika </br>
+Tuna - tuna </br>
+Pipi - Pipi </br>
+Paua - paua </br>
+Kaimoana e hi! </br></td>
+    <td>Lorem ipsum ...</td>
+ </tr>
+</table>
 
 How to Install
 ======
