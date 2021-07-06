@@ -1,5 +1,5 @@
 # WHEKE-WHEKE
-Is a T-SQL script tool which tentacles will allows you to discover unused SQL Server database across your SQL Server data warehouse.
+Is a T-SQL script tool which tentacles will allows you to discover unused SQL Server database across your SQL Server data center.
 
 Wheke-Wheke takes its name from the Māori song Kina-Kina which lyrics are: 
 
@@ -41,9 +41,9 @@ Why Wheke-Wheke
 
 Few days ago I wrote a tool called [SQL_Spring_Cleaning](https://github.com/francesco1119/SQL_Spring_Cleaning)  that allows you to identify unused database on your SQL Server. 
 
-But what to do if you need to discover unused SQL Server databases in a data warehouse scenario? 
+But what to do if you need to discover unused SQL Server databases in a data center scenario? 
 
-The idea of deploying a script on each server of the data warehouse will make freak out every product manager.
+The idea of deploying a script on each server of the data center will make freak out every product manager.
 
 Here is when **Wheke-Wheke** comes handy: this tools allows you to monitor remotely the whole data wharehouse with zero code deployed on the remote servers; all data will be centralized on your jump-server with minimal impact on your Test/Dev/Staging/Prod machines. 
 
